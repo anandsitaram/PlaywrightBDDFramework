@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@pageobjects/*": ["src/web/pageobjects/*"],
+      "@utils/*": ["utils/*"],
+      "@components/*": ["components/*"]
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noEmit": true
+  }
+}
