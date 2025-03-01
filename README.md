@@ -11,20 +11,18 @@ This is **Playwright BDD Framework** that integrates Playwright with **Behavior-
 - **Environment Management**: Supports multiple environments using **DotEnv**.
 
 ## Project Structure
-```
-PlaywrightBDDFramework/
-├── [`features`](.features)               # Feature files
-│── [src](./src)
-│ │── [utils](./utils)                      # Utility functions
-├── [testdata](./testdata)                # Test data for scenarios
-├── [playwright.config.ts](./playwright.config.ts) # Playwright configuration file
-├── [tsconfig.json](./tsconfig.json)       # TypeScript configuration file
-├── [package.json](./package.json)        # Dependencies and scripts
-└── [README.md](./README.md)              # Project documentation
 
-```
+- [features](./features) - Contains feature files.
+- [src](./src)  - Contains source code for steps ,pageobjects and fixtures.
+- [utils](./utils) - Utility functions.  
+- [testdata](./testdata) - Test data files in json
+- [playwright.config.ts](./playwright.config.ts) - Playwright configuration settings.  
+- [tsconfig.json](./tsconfig.json) - TypeScript configuration file.  
+- [package.json](./package.json) - Defines dependencies and scripts.  
+- [README.md](./README.md) - Project documentation.  
 
 ## Installation
+
 1. Clone the repository:
    ```sh
    git clone https://github.com/anandsitaram/PlaywrightBDDFramework.git
@@ -34,9 +32,24 @@ PlaywrightBDDFramework/
    ```sh
    npm install
    ```
+## Tools and Technologies Used
+- **Playwright** - Browser automation framework for fast and reliable testing.
+- **TypeScript** - Ensures type safety and maintainability.
+- **Node.js** - Runtime environment for executing tests.
+- **Playwright-BDD** - Enables BDD-style test scripting.
+- **DotEnv** - Manages multiple environment configuratio
+
 
 ## Running Tests
-### Run all tests
+To run a specific feature file, update the `playwright.config.ts` file as shown below:
+
+```ts
+const testDir = defineBddConfig({
+  features: 'features/login.feature',
+  tags: '@smoke'
+});
+```
+Use the following command to run tests:
 ```sh
 npm run test 
 ```
