@@ -13,7 +13,7 @@ This is **Playwright BDD Framework** that integrates Playwright with **Behavior-
 ## Project Structure
 ```
 PlaywrightBDDFramework/
-├── [features](./features)               # Feature files
+├── [`features`](.features)               # Feature files
 │── [src](./src)
 │ │── [utils](./utils)                      # Utility functions
 ├── [testdata](./testdata)                # Test data for scenarios
