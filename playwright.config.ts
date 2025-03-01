@@ -22,8 +22,12 @@ config.config({
   override:true
 })
 const testDir = defineBddConfig({
-  features: 'features',
+  // Do not update
   steps: ['src/**/**/*.ts'],
+
+
+  features: 'features',
+  tags:'@smoke'
 });
 
 export default defineConfig({
