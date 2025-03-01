@@ -5,6 +5,7 @@ export class OrderSuccessPage extends BasePage {
     private readonly orderNoTxt:Locator;
     private readonly orderSuccessHeader:Locator;
 
+
     constructor(page:Page) {
         super(page);
         this.orderNoTxt = page.locator("div[class='checkout-success'] p span");

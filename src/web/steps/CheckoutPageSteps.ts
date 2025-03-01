@@ -16,3 +16,6 @@ When(/^the user continues to the review page$/, async ({checkoutPage})=> {
     await checkoutPage.clickContinue();
 
 });
+Then(/^the user selects shipping rate "([^"]*)"$/, async ({checkoutPage},shippingRate:string)=> {
+    await checkoutPage.selectShippingRate(shippingRate);
+});

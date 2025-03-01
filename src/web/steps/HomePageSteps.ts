@@ -15,3 +15,12 @@ When("the user hovers over the {string} sub-category and selects {string}", asyn
 
 
 
+Given(/^the user logs in with username "([^"]*)" and password "([^"]*)"$/, async ({homePage},userName:string,password:string) =>{
+    await homePage.signIn(userName,password)
+    await expect(homePage.isSignedIn()).resolves.toBeTruthy();
+
+});
+Given(/^the user hovers over the "([^"]*)" sub\-category$/,  async ({homePage},option:string) =>{
+    await homePage.mouseHoverOnSubMenu(option)
+
+});
